@@ -7,7 +7,12 @@ using System.Windows.Forms;
 
 namespace COMP123_S2017_FinalExam_StudentID
 {
-    public class ScoreBoard
+
+    //Luis Sanchez - 3007964905
+    //Score class and properties
+    //Test # 2
+    //8/17/2017
+    public class ScoreBoard : PickHighestCardForm
     {
         private TextBox _finalScoreTextBox;
         private int _score;
@@ -35,5 +40,17 @@ namespace COMP123_S2017_FinalExam_StudentID
             }
         }
         public TextBox TimeTextBox { set; get; }
+
+        public ScoreBoard(TextBox scoreTextBox,TextBox timeTextBox, TextBox finalScoreTextBox)
+        {
+            ScoreTextBox = scoreTextBox;
+            TimeTextBox = timeTextBox;
+            FinalScoreTextBox = finalScoreTextBox;
+        }
+
+        public static void UpdateTime()
+        {
+            
+        }
     }
 }

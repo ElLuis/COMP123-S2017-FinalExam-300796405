@@ -1,4 +1,8 @@
 ﻿namespace COMP123_S2017_FinalExam_StudentID
+//Luis Sanchez - 3007964905
+//Splash Screen for 3 seconds
+//Test # 2
+//8/17/2017
 {
     partial class SplashForm
     {
