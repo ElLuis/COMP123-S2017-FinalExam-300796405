@@ -47,8 +47,10 @@
             // splashProgressBar
             // 
             this.splashProgressBar.Location = new System.Drawing.Point(0, 425);
+            this.splashProgressBar.MarqueeAnimationSpeed = 50;
             this.splashProgressBar.Name = "splashProgressBar";
             this.splashProgressBar.Size = new System.Drawing.Size(584, 36);
+            this.splashProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.splashProgressBar.TabIndex = 1;
             // 
             // SplashForm
@@ -60,7 +62,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.splashProgressBar);
             this.Controls.Add(this.splashImage);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SplashForm";

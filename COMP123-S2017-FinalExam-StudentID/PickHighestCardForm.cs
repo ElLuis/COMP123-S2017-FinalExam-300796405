@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -115,9 +116,16 @@ namespace COMP123_S2017_FinalExam_StudentID
         // CONSTRUCTORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public PickHighestCardForm()
         {
+            Thread t = new Thread(new ThreadStart(StartForm));
+            t.Start();
+            Thread.Sleep(3000);
             InitializeComponent();
+            t.Abort();
         }
-
+        public void StartForm()
+        {
+            Application.Run(new SplashForm());
+        }
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         /// <summary>
         /// This is the DealButton's "Click" event handler method
@@ -396,6 +404,16 @@ namespace COMP123_S2017_FinalExam_StudentID
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ScoreTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserMessageTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
